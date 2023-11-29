@@ -5,8 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background:  url(./components/Images/bgi.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -20,4 +25,9 @@ h5,
 h6,
 p {
   margin: 0;
+}
+.active {
+  color: #e84a5f;
+  border: 1px solid #e84a5f;
+  border-radius: 10px;
 }
