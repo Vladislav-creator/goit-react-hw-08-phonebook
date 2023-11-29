@@ -20,11 +20,11 @@ export const ContactForm = () => {
       return alert(`${formName} is already in contacts`);
     }
 
-    if (contacts.some(({ phone }) => phone === formNumber)) {
+    if (contacts.some(({ number }) => number === formNumber)) {
       return alert(`${formNumber} is already in contacts`);
     }
 
-    dispatch(addContact({ name: formName, phone: formNumber }));
+    dispatch(addContact({ name: formName, number: formNumber }));
     form.reset();
   };
 

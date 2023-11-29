@@ -15,8 +15,8 @@ export const ContactList = () => {
   });
   return (
     <ContactsList>
-      {sortedContacts.map(({isFavourite, name, phone, id}) => (
-        <ContactsListItem isFavourite={isFavourite} key={id} id={id} name={name} number={phone} />
+      {sortedContacts.map(({isFavourite, name, number, id}) => (
+        <ContactsListItem isFavourite={isFavourite} key={id} id={id} name={name} number={number} />
       ))}
     </ContactsList>
   );

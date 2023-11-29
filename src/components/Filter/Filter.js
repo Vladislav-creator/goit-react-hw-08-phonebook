@@ -32,13 +32,15 @@ import { nanoid } from 'nanoid';
 
 export const Filter = () => {
   const userQueryFilter = useSelector(selectContactsFilter);
+  
   const dispatch = useDispatch();
 
   const searchInputId = nanoid();
 
   const handleFilterChange = e => {
     const userQuery = e.target.value;
-    dispatch(setContactsFilter(userQuery));
+    const normalizedValue = userQuery.toLowerCase().trim();
+    dispatch(setContactsFilter(normalizedValue));
   };
 
   return (
