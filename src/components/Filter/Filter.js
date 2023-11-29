@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setContactsFilter } from '../../redux/contacts/filtersSlice';
 import { selectContactsFilter } from '../../redux/contacts/selectors';
 
- //import { Label, Input } from './Filter.module';
+ import { Label, Input } from './Filter.module';
 
 // export const Filter = () => {
 //   const dispatch = useDispatch();
@@ -43,8 +43,8 @@ export const Filter = () => {
 
   return (
     <div >
-      <label htmlFor={searchInputId}>Find contacts by name</label>
-      <input
+      <Label htmlFor={searchInputId}>Find contacts by name</Label>
+      <Input
         type="text"
         id={searchInputId}
         value={userQueryFilter}
