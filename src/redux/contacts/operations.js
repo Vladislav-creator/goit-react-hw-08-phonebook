@@ -9,7 +9,6 @@ export const fetchContacts = createAsyncThunk(
     try {
       const response = await axios.get('/contacts');
       return response.data;
-    //   console.log(response.data);
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
@@ -38,18 +37,4 @@ export const deleteContact = createAsyncThunk(
       return thunkAPI.rejectWithValue(e.message);
     }
   }
-);
-export const toggleStatus = createAsyncThunk(
-    'contacts/toggleStatus',
-    async ( contact,  thunkAPI) => {
-        try {
-            const response = await axios.put(`/contacts/${contact.id}`, {
-              isFavourite: !contact.isFavourite,
-             
-              });
-            return response.data; 
-        } catch (e) {
-            return thunkAPI.rejectWithValue(e.message);
-          }
-    }
 );

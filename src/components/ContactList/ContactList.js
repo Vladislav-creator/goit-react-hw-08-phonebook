@@ -10,13 +10,11 @@ export const ContactList = () => {
 
   const visibleContacts = useSelector(selectVisibleContacts);
 
-  const sortedContacts = visibleContacts.slice().sort((a, b) => {
-    return b.isFavourite - a.isFavourite;
-  });
+  
   return (
     <ContactsList>
-      {sortedContacts.map(({isFavourite, name, number, id}) => (
-        <ContactsListItem isFavourite={isFavourite} key={id} id={id} name={name} number={number} />
+      {visibleContacts.map(({ name, number, id}) => (
+        <ContactsListItem  key={id} id={id} name={name} number={number} />
       ))}
     </ContactsList>
   );

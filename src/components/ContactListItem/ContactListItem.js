@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
 
-import { deleteContact, toggleStatus } from '../../redux/contacts/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 
 import {
   ContactItem,
@@ -17,14 +17,9 @@ export const ContactsListItem = ( contact ) => {
   const handleDeleteContact = userId => {
     dispatch(deleteContact(userId));
   };
-  const handleToggle = () => dispatch(toggleStatus(contact));
+
   return (
     <ContactItem key={contact.id}>
-        <input
-        type='checkbox'
-        checked={contact.isFavourite}
-        onChange={handleToggle}
-      />
       <ContactName>
         {contact.name}:<ContactNumber>{contact.number}</ContactNumber>
       </ContactName>
