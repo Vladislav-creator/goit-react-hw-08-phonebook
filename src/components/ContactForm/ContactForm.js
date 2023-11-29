@@ -13,10 +13,10 @@ export const ContactForm = () => {
     e.preventDefault();
 
     const form = e.target;
-    const formName = e.target.elements.name.value.toLowerCase();
+    const formName = e.target.elements.name.value;
     const formNumber = e.target.elements.number.value;
 
-    if (contacts.some(({ name }) => name.toLowerCase() === formName)) {
+    if (contacts.some(({ name }) => name.toLowerCase() === formName.toLowerCase())) {
       return alert(`${formName} is already in contacts`);
     }
 
