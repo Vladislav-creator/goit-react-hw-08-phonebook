@@ -9,7 +9,7 @@ import {
   ContactName,
   ContactNumber,
   Button,
-  FlexButtons
+  FlexWrap
 } from './ContactListItem.module';
 
 export const ContactsListItem = ({ name, number, id }) => {
@@ -32,11 +32,16 @@ export const ContactsListItem = ({ name, number, id }) => {
     <div>
     {isModalOpen && <ModalEditContact />}
     <ContactItem key={id}>
+    <FlexWrap>
+    
       <ContactName>
         {name}:
       </ContactName>
-      <FlexButtons>
+      
       <ContactNumber>{number}</ContactNumber>
+      
+      </FlexWrap>
+      <FlexWrap>
         <Button onClick={() => handleDeleteContact(id)}>Delete</Button>
       <Button
           type="button"
@@ -44,7 +49,7 @@ export const ContactsListItem = ({ name, number, id }) => {
         >
           Edit
         </Button>
-        </FlexButtons>
+        </FlexWrap>
     </ContactItem>
     </div>
   );
