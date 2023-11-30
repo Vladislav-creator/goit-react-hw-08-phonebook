@@ -53,7 +53,7 @@ const contactsSlice = createSlice({
       const index = state.items.findIndex(
         contact => contact.id === action.payload.id
       );
-      state.contacts.splice(index, 1, action.payload);
+      state.items.splice(index, 1, action.payload);
     },
     [editContact.rejected]: handleRejected,
   },
