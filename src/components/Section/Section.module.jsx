@@ -9,7 +9,7 @@ export const SectionContainer = styled.section`
   justify-items: center;
   gap: 14px;
   background: #BA55D3;
-  width: 30%;
+  max-width: 400px;
   border-radius: 10%;
 `;
 

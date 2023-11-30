@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {editContact } from '../../redux/contacts/operations';
 import { selectEditContactData, setEditContactData, setModalStatus } from '../../redux/contacts/modalSlice';
 import {selectContactsList} from '../../redux/contacts/selectors'
+import { Formstyle, Inputstyle, Inputname, Button } from './EditContactForm.module';
 export const EditContactForm = () => {
   const contacts = useSelector(selectContactsList);
   
@@ -41,11 +42,11 @@ export const EditContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} >
-      <label htmlFor={id} >
+    <Formstyle onSubmit={handleSubmit} >
+      <Inputname htmlFor={id} >
         New Name
-      </label>
-      <input
+      </Inputname>
+      <Inputstyle
         type="text"
         name="name"
         defaultValue={name}
@@ -55,10 +56,10 @@ export const EditContactForm = () => {
         required
       />
 
-      <label htmlFor={id} >
+      <Inputname htmlFor={id} >
        New Number
-      </label>
-      <input
+      </Inputname>
+      <Inputstyle
         type="tel"
         name="number"
         defaultValue={number}
@@ -68,10 +69,10 @@ export const EditContactForm = () => {
         required
       />
 
-      <button type="submit" >
+      <Button type="submit" >
         Edit contact
-      </button>
-    </form>
+      </Button>
+    </Formstyle>
   );
 };
 
