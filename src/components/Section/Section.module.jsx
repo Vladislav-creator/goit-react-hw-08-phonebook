@@ -10,7 +10,7 @@ export const SectionContainer = styled.section`
   gap: 14px;
   background: #BA55D3;
   max-width: 500px;
-  border-radius: 10%;
+  border-radius: 5%;
 `;
 
 export const Title = styled.h2`

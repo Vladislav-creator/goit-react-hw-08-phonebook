@@ -4,6 +4,8 @@ export const ContactItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid black;
+  padding: 7px;
 `;
 
 export const ContactName = styled.p`
