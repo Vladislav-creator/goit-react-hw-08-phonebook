@@ -1,5 +1,5 @@
 import EditContactForm from 'components/EditContactForm/EditContactForm';
-
+import { Backdrop, Modal, Text, CloseButton } from './ModalEditContact.module.';
 import { useDispatch } from 'react-redux';
 import { setEditContactData, setModalStatus } from '../../redux/contacts/modalSlice';
 import { useEffect } from 'react';
@@ -33,13 +33,13 @@ export const ModalEditContact = () => {
         };
       });
     
-    return <div  onClick={handleOverlayClick}>
-        <div >
-            <p >You are trying to change the next contact:</p>
-            <button  onClick={onCloseBtnClick}>&times;</button>
+    return <Backdrop  onClick={handleOverlayClick}>
+        <Modal >
+            <Text>You are trying to change the next contact:</Text>
+            <CloseButton onClick={onCloseBtnClick}>&times;</CloseButton>
             <EditContactForm />
-        </div>
-    </div>
+        </Modal>
+    </Backdrop>
 }
 
 export default ModalEditContact;
