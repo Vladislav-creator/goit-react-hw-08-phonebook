@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-
-import { useDispatch } from 'react-redux';
-
+import { ModalEditContact } from '../ModalEditContact/ModalEditContact'
+import { useDispatch, useSelector } from 'react-redux';
+import { setEditContactData, setModalStatus, selectModalStatus } from '../../redux/contacts/modalSlice'
 import { deleteContact } from '../../redux/contacts/operations';
-
+import { useEffect } from 'react';
 import {
   ContactItem,
   ContactName,
@@ -11,20 +11,38 @@ import {
   Button,
 } from './ContactListItem.module';
 
-export const ContactsListItem = ( contact ) => {
+export const ContactsListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
+  const isModalOpen = useSelector(selectModalStatus);
 
+  const onEditBtnClick = () => {
+    dispatch(setModalStatus(true));
+    dispatch(setEditContactData({ name, number, id }));
+  }
+
+  useEffect(()=>{
+
+  }, [])
   const handleDeleteContact = userId => {
     dispatch(deleteContact(userId));
   };
 
   return (
-    <ContactItem key={contact.id}>
+    <div>
+    {isModalOpen && <ModalEditContact />}
+    <ContactItem key={id}>
       <ContactName>
-        {contact.name}:<ContactNumber>{contact.number}</ContactNumber>
+        {name}:<ContactNumber>{number}</ContactNumber>
       </ContactName>
-      <Button onClick={() => handleDeleteContact(contact.id)}>Delete</Button>
+      <Button onClick={() => handleDeleteContact(id)}>Delete</Button>
+      <Button
+          type="button"
+          onClick={onEditBtnClick}
+        >
+          Edit
+        </Button>
     </ContactItem>
+    </div>
   );
 };
 
