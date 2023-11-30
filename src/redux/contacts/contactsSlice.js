@@ -50,7 +50,7 @@ const contactsSlice = createSlice({
     [editContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      const index = state.contacts.findIndex(
+      const index = state.items.findIndex(
         contact => contact.id === action.payload.id
       );
       state.contacts.splice(index, 1, action.payload);
