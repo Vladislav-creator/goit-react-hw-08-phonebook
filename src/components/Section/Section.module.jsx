@@ -8,9 +8,9 @@ export const SectionContainer = styled.section`
   justify-content: center;
   justify-items: center;
   gap: 14px;
-  background: #BA55D3;
+  background: rgba(138, 43, 226, 0.8);
   max-width: 500px;
-  border-radius: 5%;
+  border-radius: 2%;
 `;
 
 export const Title = styled.h2`

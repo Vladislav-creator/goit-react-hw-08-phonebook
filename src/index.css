@@ -28,6 +28,6 @@ p {
 }
 .active {
   color: #e84a5f;
-  border: 1px solid #e84a5f;
+  border: 2px solid #e84a5f;
   border-radius: 10px;
 }
