@@ -3,11 +3,53 @@
     background-color: rgba(138, 43, 226, 0.5);
     padding: 10px;
     border-radius: 10px;
+    font-size: 1.2rem ;
   }
   
   .label {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+    
+  }
+  .button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    /* font-weight: 400; */
+    letter-spacing: -.24px;
+    margin-top: 10px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
   
+  .button:hover {
+    background-color: #FF99DD;
+    box-shadow: #FF66CC 0 -6px 8px inset;
+    transform: scale(1.025);
+  }
+  .button:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+  }

@@ -4,13 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setEditContactData, setModalStatus, selectModalStatus } from '../../redux/contacts/modalSlice'
 import { deleteContact } from '../../redux/contacts/operations';
 import { useEffect } from 'react';
-import {
-  ContactItem,
-  ContactName,
-  ContactNumber,
-  Button,
-  FlexWrap
-} from './ContactListItem.module';
+import css from './ContactListItem.module.css';
 
 export const ContactsListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -37,26 +31,26 @@ export const ContactsListItem = ({ name, number, id }) => {
   return (
     <div>
     {isModalOpen && <ModalEditContact />}
-    <ContactItem key={id}>
-    <FlexWrap>
+    <li className={css.contactListItem} key={id}>
+    <div className={css.flexWrap}>
     
-      <ContactName>
+      <p className={css.contactName}>
         {name}:
-      </ContactName>
+      </p>
       
-      <ContactNumber>{number}</ContactNumber>
+      <span className={css.contactNumber}>{number}</span>
       
-      </FlexWrap>
-      <FlexWrap>
-        <Button onClick={() => handleDeleteContact(id)}>Delete</Button>
-      <Button
+      </div>
+      <div className={css.flexWrap}>
+        <button className={css.button} onClick={() => handleDeleteContact(id)}>Delete</button>
+      <button className={css.button}
           type="button"
           onClick={onEditBtnClick}
         >
           Edit
-        </Button>
-        </FlexWrap>
-    </ContactItem>
+        </button>
+        </div>
+    </li>
     </div>
   );
 };

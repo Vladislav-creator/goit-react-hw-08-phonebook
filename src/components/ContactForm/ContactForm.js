@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectContactsList } from '../../redux/contacts/selectors';
 import { addContact } from '../../redux/contacts/operations';
 
-import { Form, Input, Label, Button } from './ContactForm.module';
+import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -29,10 +29,10 @@ export const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
+    <form className={css.formstyle} onSubmit={handleSubmit} autoComplete="off">
+      <label className={css.inputname}>
         Name
-        <Input
+        <input className={css.inputstyle}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -41,10 +41,10 @@ export const ContactForm = () => {
           placeholder="Enter name"
           value={contacts.name}
         />
-      </Label>
-      <Label>
+      </label>
+      <label className={css.inputname}>
         Number
-        <Input
+        <input className={css.inputstyle}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -53,8 +53,8 @@ export const ContactForm = () => {
           placeholder="Enter number"
           value={contacts.number}
         />
-      </Label>
-      <Button type="submit">Add contact</Button>
-    </Form>
+      </label>
+      <button className={css.button} type="submit">Add contact</button>
+    </form>
   );
 };

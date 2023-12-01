@@ -56,8 +56,8 @@
 }
 
 .button:hover {
-    background-color: #FFC229;
-    box-shadow: #FF6314 0 -6px 8px inset;
+    background-color: #FF99DD;
+    box-shadow: #FF66CC 0 -6px 8px inset;
     transform: scale(1.025);
 }
 

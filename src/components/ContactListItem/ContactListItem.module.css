@@ -1,0 +1,59 @@
+
+
+.contactListItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 7px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  margin-bottom: 1px;
+  gap: 10px;
+};
+
+.contactName {
+  margin: 0;
+  font-weight: 500;
+  text-align: start;
+};
+
+.contactNumber{
+  margin-left: 10px;
+  text-align: end;
+};
+
+
+.button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+  transform: scale(1.125);
+}
+.button:hover {
+  background-color: #FF99DD;
+    box-shadow: #FF66CC 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+  .button {
+      padding: 0.25em 0.75em;
+      margin-left: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 0.25em 0.5em;
+ border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  }
+  .button:not(:last-of-type) {
+    margin-right: 5px;
+    }
+    
