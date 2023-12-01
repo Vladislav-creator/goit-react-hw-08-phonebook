@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {editContact } from '../../redux/contacts/operations';
 import { selectEditContactData, setEditContactData, setModalStatus } from '../../redux/contacts/modalSlice';
 import {selectContactsList} from '../../redux/contacts/selectors'
-import { Formstyle, Inputstyle, Inputname, Button } from './EditContactForm.module';
+import css from './EditContactForm.module.css';
 export const EditContactForm = () => {
   const contacts = useSelector(selectContactsList);
  
@@ -43,37 +43,37 @@ export const EditContactForm = () => {
   };
 
   return (
-    <Formstyle onSubmit={handleSubmit} >
-      <Inputname htmlFor={id} >
+    <form className={css.formstyle} onSubmit={handleSubmit} >
+      <label className={css.inputname}  htmlFor={id} >
         New Name
-      </Inputname>
-      <Inputstyle
+      </label>
+      <input
         type="text"
         name="name"
         defaultValue={name}
-        
+        className={css.inputstyle}
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         id={id}
         required
       />
 
-      <Inputname htmlFor={id} >
+      <label className={css.inputname} htmlFor={id} >
        New Number
-      </Inputname>
-      <Inputstyle
+      </label>
+      <input
         type="tel"
         name="number"
         defaultValue={number}
-        
+        className={css.inputstyle}
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         id={id}
         required
       />
 
-      <Button type="submit" >
+      <button className={css.button} type="submit" >
         Edit contact
-      </Button>
-    </Formstyle>
+      </button>
+    </form>
   );
 };
 

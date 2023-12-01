@@ -1,7 +1,9 @@
 .form {
     width: 320px;
+    background-color: rgba(138, 43, 226, 0.5);
+    padding: 10px;
+    border-radius: 10px;
   }
-  
   .label {
     display: flex;
     flex-direction: column;
