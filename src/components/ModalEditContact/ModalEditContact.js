@@ -6,16 +6,18 @@ import { useEffect } from 'react';
 
 export const ModalEditContact = () => {
   const dispatch = useDispatch();
-
+ 
   const onCloseBtnClick = () => {
     dispatch(setModalStatus(false));
     dispatch(setEditContactData(null));
+   
   }
 
     const handleOverlayClick = event => {
         if (event.currentTarget === event.target) {
             dispatch(setModalStatus(false));
             dispatch(setEditContactData(null));
+          
         }
       };
     
@@ -24,6 +26,7 @@ export const ModalEditContact = () => {
           if (event.code === 'Escape') {
             dispatch(setModalStatus(false));
             dispatch(setEditContactData(null));
+            
           }
         };
     

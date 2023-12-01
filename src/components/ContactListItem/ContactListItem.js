@@ -15,10 +15,16 @@ import {
 export const ContactsListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   const isModalOpen = useSelector(selectModalStatus);
-
+  const body = document.body;
+  if(isModalOpen) {
+    body.classList.add('disable-scroll')
+  }else{
+    body.classList.remove('disable-scroll')
+  }
   const onEditBtnClick = () => {
     dispatch(setModalStatus(true));
     dispatch(setEditContactData({ name, number, id }));
+   
   }
 
   useEffect(()=>{

@@ -5,7 +5,7 @@ import {selectContactsList} from '../../redux/contacts/selectors'
 import { Formstyle, Inputstyle, Inputname, Button } from './EditContactForm.module';
 export const EditContactForm = () => {
   const contacts = useSelector(selectContactsList);
-  
+ 
   const {name, number, id} = useSelector(selectEditContactData);
 
   const filteredContactsByName = contacts.filter(contact => contact.name !== name);
@@ -37,6 +37,7 @@ export const EditContactForm = () => {
       } }));
       dispatch(setModalStatus(false));
       dispatch(setEditContactData(null));
+      
     }
     form.reset();
   };
