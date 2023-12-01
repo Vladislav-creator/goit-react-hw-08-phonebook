@@ -34,11 +34,11 @@ export const ContactsListItem = ({ name, number, id }) => {
     <li className={css.contactListItem} key={id}>
     <div className={css.flexWrap}>
     
-      <p className={css.contactName}>
+      <p className={css.contactInfo}>
         {name}:
       </p>
       
-      <span className={css.contactNumber}>{number}</span>
+      <p className={css.contacts}>{number}</p>
       
       </div>
       <div className={css.flexWrap}>
