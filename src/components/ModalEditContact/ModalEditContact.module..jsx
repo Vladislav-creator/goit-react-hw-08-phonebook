@@ -10,7 +10,6 @@ background-color: rgba(0, 0, 0, 0.4);
 transition: opacity 300ms linear, visibility 300ms linear;
 z-index: 1;
 `;
-
 export const Modal = styled.div`
 position: absolute;
     top: 50%;
@@ -25,7 +24,6 @@ position: absolute;
     transition: transform 300ms linear;
     padding: 24px;
 `;
-
 export const Text = styled.p`
 color: rgb(0, 0, 0);
 font-size: larger;
@@ -39,5 +37,13 @@ position: absolute;
     top: 24px;
     right: 24px;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    :hover,
+    :focus{
+        background: blueviolet;
+        color: white;
+        transform: scale(1.15);
+    };
 `;
  
