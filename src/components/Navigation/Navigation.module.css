@@ -17,3 +17,18 @@
   .link.active {
     border: 2px solid #ff3cac;
   } 
+  .p{
+    font-weight: 700;
+    color:#e84a5f;
+    font-size: 22px;
+  } 
+  .wrapperLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .wrapperRight {
+    display: flex;
+    align-items: center;
+    gap: 400px;
+  }
