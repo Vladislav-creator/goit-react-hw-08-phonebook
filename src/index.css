@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:  url(./components/Images/bgi.jpg) no-repeat center center fixed;
+  background:  url(./components/Images/robot-humanoid.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

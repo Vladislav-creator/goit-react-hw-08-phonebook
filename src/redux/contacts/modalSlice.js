@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     isModalOpen: false,
     editContactData: null,
+    // id: null,
 }
 
 export const modalSlice = createSlice({
@@ -14,6 +15,7 @@ export const modalSlice = createSlice({
         },
         setEditContactData: (state, action) => {
             state.editContactData = action.payload
+            // state.id = action.payload.id ;
         },
     }
 })
