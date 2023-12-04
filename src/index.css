@@ -37,3 +37,8 @@ p {
   overflow: hidden;
   height: 100vh;
 }
+.p{
+  font-weight: 700;
+  color:#e84a5f;
+  font-size: 22px;
+}
