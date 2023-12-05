@@ -13,7 +13,7 @@ export const ContactForm = () => {
     e.preventDefault();
 
     const form = e.target;
-    const formName = e.target.elements.name.value;
+    const formName = e.target.elements.name.value.trim();
     const formNumber = e.target.elements.number.value;
 
     if (contacts.some(({ name }) => name.toLowerCase() === formName.toLowerCase())) {
